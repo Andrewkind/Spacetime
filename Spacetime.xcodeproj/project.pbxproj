@@ -17,6 +17,8 @@
 		4926E3761C32889B00F89B3F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4926E3751C32889B00F89B3F /* Extensions.swift */; };
 		4926E3791C328E4D00F89B3F /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4926E3781C328E4D00F89B3F /* beep.mp3 */; };
 		4926E37B1C328EE600F89B3F /* beep2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4926E37A1C328EE600F89B3F /* beep2.mp3 */; };
+		4926E37F1C343A0500F89B3F /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4926E37E1C343A0500F89B3F /* Popover.swift */; };
+		4926E3811C343BF100F89B3F /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4926E3801C343BF100F89B3F /* PopoverView.swift */; };
 		498277CA1C291795006AB144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498277C91C291795006AB144 /* AppDelegate.swift */; };
 		498277CC1C291795006AB144 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 498277CB1C291795006AB144 /* GameScene.sks */; };
 		498277CE1C291795006AB144 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498277CD1C291795006AB144 /* GameScene.swift */; };
@@ -55,6 +57,8 @@
 		4926E3751C32889B00F89B3F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4926E3781C328E4D00F89B3F /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		4926E37A1C328EE600F89B3F /* beep2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep2.mp3; sourceTree = "<group>"; };
+		4926E37E1C343A0500F89B3F /* Popover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
+		4926E3801C343BF100F89B3F /* PopoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		498277C61C291795006AB144 /* Spacetime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spacetime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		498277C91C291795006AB144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498277CB1C291795006AB144 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				4926E3711C2EC2F900F89B3F /* Ship.swift */,
 				4926E3731C2F8FB800F89B3F /* CoordinatesTableViewCell.swift */,
 				4926E3751C32889B00F89B3F /* Extensions.swift */,
+				4926E37E1C343A0500F89B3F /* Popover.swift */,
+				4926E3801C343BF100F89B3F /* PopoverView.swift */,
 			);
 			path = Spacetime;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 				4926E3721C2EC2F900F89B3F /* Ship.swift in Sources */,
 				498277CE1C291795006AB144 /* GameScene.swift in Sources */,
 				4926E3741C2F8FB800F89B3F /* CoordinatesTableViewCell.swift in Sources */,
+				4926E37F1C343A0500F89B3F /* Popover.swift in Sources */,
 				498277D01C291795006AB144 /* GameViewController.swift in Sources */,
+				4926E3811C343BF100F89B3F /* PopoverView.swift in Sources */,
 				4926E3761C32889B00F89B3F /* Extensions.swift in Sources */,
 				4926E36E1C2E986F00F89B3F /* ShipDetailViewController.swift in Sources */,
 				498277CA1C291795006AB144 /* AppDelegate.swift in Sources */,

@@ -74,6 +74,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SetTargetDelegate {
     var thrustVector : CGVector?
     var firstLoad = true
     
+    var popoverView : SKView?
+    
     //MARK: - Functions
     
     override func didMoveToView(view: SKView) {
@@ -249,12 +251,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SetTargetDelegate {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
         
-        
         for touch in touches {
             
             
             if (ship?.hasActions() == false) {
-                
                 
                 // Get the position that was touched (a.k.a. ending point).
                 let touchPosition = touch.locationInNode(self)
@@ -342,9 +342,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SetTargetDelegate {
                         
                     }
                 }
-                    
-                    
-                    
+                
+                // * No Specific Target touched
                 else {
                     // Calculate the angle using the relative positions of the sprite and touch.
                     let angle = atan2(ship!.position.y - touchPosition.y, ship!.position.x - touchPosition.x)
@@ -361,14 +360,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SetTargetDelegate {
                     //ship!.runAction(SKAction.sequence([rotateAction, moveAction]))
                     ship!.runAction(SKAction.sequence([rotateAction, moveAction]))
                     ship?.runAction(SKAction.sequence([rotateAction, moveAction]), withKey: "rotateMove")
-                    
+                
                 }
-                
-                //worldNode.runAction(SKAction.moveTo(ship!.position, duration: 0.5))
-                
             }
-            
-            
         }
     }
     
@@ -388,7 +382,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate, SetTargetDelegate {
             let distance = distanceBetweenPoints(ship!.position, second: myCoords.position)
             moveToNode(myCoords as! SKSpriteNode, distance: Float(distance))
         }
-        */
+
+        
+        skViewPopUp=nil;
+        scenePopUpReward=nil;
+        NSLog(@"test4 successfully fired");
+        CGFloat fltHeight = [UIScreen mainScreen].bounds.size.height;
+        CGFloat fltWidth = [UIScreen mainScreen].bounds.size.width;
+        CGRect rectPopUpReward = CGRectMake(0, 0, fltWidth/2, fltHeight/2);
+        skViewPopUp = [[SKView alloc] initWithFrame:rectPopUpReward];
+        [self.view addSubview:skViewPopUp];
+        skViewPopUp.allowsTransparency = YES;
+        scenePopUpReward = [[LTSceneStoreMain alloc] initWithSize:CGSizeMake(fltWidth/2, fltHeight/2)];
+        scenePopUpReward.backgroundColor = [UIColor clearColor];
+        [skViewPopUp presentScene:scenePopUpReward];
+*/
+        
+        popoverView = nil
+        let heightFloat = UIScreen.mainScreen().bounds.size.height
+        let widthFloat = UIScreen.mainScreen().bounds.size.width
+        let rect = CGRectMake(0, 0, widthFloat/2, heightFloat/2)
+        popoverView = SKView(frame: rect)
+        popoverView?.backgroundColor = UIColor.redColor()
+        self.view?.addSubview(popoverView!)
+        popoverView?.allowsTransparency = true
+
+        
+        
+        
     }
     
     func playSound(soundName : String) {
